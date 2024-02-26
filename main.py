@@ -21,9 +21,6 @@ string_to_matrix_y = '['
 for i in range(0, len(x_data)):
     string_to_matrix_x += '{}, {}, 1;'.format(str(x_data[i]**2), str(x_data[i]))
     string_to_matrix_y += '{} ;'.format((str(y_data[i])))
-    #x_matrix[i][0] = x_data[i]**2
-    #x_matrix[i][1] = x_data[i]
-    #x_matrix[i][2] = 1
 string_to_matrix_x = string_to_matrix_x[0:-1] + ']'
 string_to_matrix_y = string_to_matrix_y[0:-1] + ']'
 print(string_to_matrix_y)
