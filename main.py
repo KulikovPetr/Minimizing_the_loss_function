@@ -31,14 +31,19 @@ print('у-матрица: \n{}\n'.format(y_matrix))
 
 x_matrix = np.matrix(string_to_matrix_x)
 print("x-Матрица:\n{}\n".format(x_matrix))
+
 x_matrix_transposed = np.transpose(x_matrix)
 print("Транспонированная:\n {}\n".format(x_matrix_transposed))
+
 xt_x_x = np.dot(x_matrix_transposed,x_matrix)
 print("перемноженная:\n {}\n".format(xt_x_x))
+
 x_matrix_multiplayed_inverted = (xt_x_x**(-1))
 print("Обратная матрица: \n {}\n".format(x_matrix_multiplayed_inverted))
+
 inverted_dot_xt = x_matrix_multiplayed_inverted*x_matrix_transposed
 print("Обратная матрица, умноженная на транспоннированную: \n {}\n".format(inverted_dot_xt))
+
 beta_matrix = inverted_dot_xt*y_matrix
 print("Бета-матрица: \n {}\n".format(beta_matrix))
 
